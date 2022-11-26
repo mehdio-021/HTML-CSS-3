@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    transition: color .2s;
+}
+
+a:hover {
+    color: #FF4A52;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+li:hover {
+    color: #FF4A52;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.w-100 {
+    width: 100%!important;
+}
+
+.w-50 {
+    width: 50%!important;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.font-15 {
+    font-size: 15px!important;
+}
+
+header {
+    background-color: #ffffff;
+    justify-content: space-around;
+    padding: 25px 0;
+    position: relative;
+}
+
+nav li {
+    display: none;
+    margin-right: 35px;
+    font-size: 1.3em;
+    
+}
+nav ul {
+    margin-top: 11px;
+}
+.search-icon{
+   justify-content: center;
+   align-items: center;
+}
+.search-icon a {
+    color:black ;
+}
+.drop-down-menu a {
+    color: black;
+}
+.slider{
+    background-image: url("../images/banner2.png");
+    height: 50vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-text {
+    justify-content: space-around;
+    align-items: center;
+    /* وقتی از آلاین ایتم استفاده میکنیم باید برای ظرف یک ارنفاع مشخص کنیم */
+    height: 45vw;
+    flex-direction: column;
+}
+.slider-text h3 {
+    font-size: 7vw;
+    font-family: "Nothing You Could Do", cursive;
+    color: white;
+    text-shadow: 2px 3px 0px cadetblue ;
+    font-weight: 400;
+    margin-top: 50px;
+}
+@font-face {
+    font-family: "Nothing You Could Do";
+    src: url("../font/fonts/NothingYouCouldDo-Regular.ttf");
+}
+.slider-text p{
+    color: white;  
+    font-size: 2.5vw;
+    font-weight: 400
+}
+.slider-btn{
+    background-color: #1EC6B6;
+    padding: 1vw 1.5vw;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.7vw;
+    outline: 0;
+    transition: background-color 0.2s;
+
+}
+.slider-btn:hover{
+    background-color: #FF4A52;
+    color: white!important;
+ 
+}
+
+.search-bar{
+    background-color: #040E27;
+    flex-direction: column;
+    padding: 20px 25px;
+    align-items: center;
+}
+.search-form{
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #363e52;
+    border-radius:5px ;
+    margin: 10px;
+    padding: 17px 50px;
+    color: white;
+    outline: none;
+}
+.search-btn{
+    background-color: #FF4A52;
+    color: white;
+    transition:  background-color 0.3s;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 17px 39px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+    cursor: pointer;
+}
+.search-btn:hover{
+    background-color: #1EC6B6;
+}
+.search-bar h3 {
+    color: white;
+    font-weight: 400;
+    font-size: 4.5vw ;
+}
+
+.populer-heading{
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+    text-align: center;
+}
+.populer-title{
+    font-size:  20px;
+    font-weight: 400;
+    margin: 10px;
+    color: #040E27;
+}
+.populer-description{
+    font-size: 16px;
+    color: #7A838B;
+    line-height: 30px;
+    font-weight: 400;
+}
+.popular-container{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img23{
+    border-radius: 5px;
+}
+.popular-container article{
+   cursor: pointer; 
+   margin: 0 10px;
+   transition:transform 0.3s ;
+   position: relative;
+}
+.popular-container article:hover{
+    transform:translateY(-10px) ;
+}
+.popular-container article::before{
+    background: linear-gradient(to bottom,rgba(4,14,39,0 )0%,rgba(4,14,39,0.7 ) 100%);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 92.4%;
+    z-index: 1000;
+    border-radius: 5px;
+}
+article img{
+    margin-bottom: 20px;
+    height: 280px;
+}
+.populer-img-info{
+  position: absolute;  
+  left: 30px;
+  bottom: 50px;
+  z-index: 10000;
+}
+.populer-img-info p{
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    transition:  0.3s;
+}
+
+.populer-img-info p a{
+    background-color: #1EC6B6;
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 7px 12px;
+    border-radius: 30px;
+    color: #fff;
+    transition:  0.3s;
+    font-weight: 400;
+}
+
+.popular-container article:hover .populer-img-info p{
+ color: #FF4A52;
+ transition: 0.3;
+}
+.popular-container article:hover .populer-img-info a{
+ background-color: #FF4A52;
+ transition: 0.3;
+
+}
+
+.newsletter{
+ background-image: url("../images/newsletter.png");
+ background-position: 65% 65%;
+ background-size: cover;
+ height: 250px;
+ position: relative;
+}
+.newsletter::before{
+    position: absolute;
+    content: "";
+    background-color:#040E27 ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.newsletter-container{
+   flex-direction: column; 
+   align-items: center;
+   z-index: 100000;
+}
+.newsletter-text{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+}
+.newsletter-text h4 {
+    color: #ffffff;
+    font-size:24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.newsletter-text p {
+    color: #AAB1B7;
+    font-size: 12px;
+
+}
+.mail-form{
+    display: flex;
+    flex-direction: column;
+}
+.mail-form input{
+    background-color: #ffffff;
+   color: black !important;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    width: 40vw;
+    height: 50px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.newsletter-btn{
+    background-color: #FF4A52;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 16px 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+}
+.video{
+    background-image: url("../images/video.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    padding: 130px 0;
+    width: 100%;
+    margin:15px 0 ;
+    position: relative;
+
+}
+.video::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height:100% ;
+    width:100% ;
+    z-index: 1;
+    background-color: #071947;
+    opacity: 0.2;
+}
+.video-container{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* برای استفاده از زد ایندکس باید المان ما پوزیشن بگیرد */
+    z-index: 100;
+}
+.video-container h3{
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 800;
+    font-size: 7vw;
+    color:white;
+    margin-bottom:30px ;
+}
+.video-button{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #1EC6B6;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.video-button a {
+    color: #ffff;
+}
+.video-button:hover{
+    background-color: #FF4A52 !important;
+}
+footer{
+    background-color: #040E27;
+    padding: 60px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+.left-footer {
+    margin-bottom:20px ;
+}
+.left-footer li {
+    color: #AAB1B7;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.footer-title{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+}
+.links li{
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    line-height: 35px;
+}
+.links li a{
+    color: #AAB1B7;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+}
+.footer-img{
+
+}
